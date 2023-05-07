@@ -1,9 +1,6 @@
-const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
-const fsPromises = fs.promises;
 
-//fsPromises.readdir(path.join(__dirname, 'secret-folder'), {});
 const link = path.join(__dirname, 'secret-folder');
 fs.readdir(link, { withFileTypes: true }, (error, dirEntryList) => {
   if (!error) {
