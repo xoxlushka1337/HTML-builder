@@ -1,6 +1,4 @@
 const fs = require('fs');
-// const path = require('path');
-// const link = path.join(__dirname, 'files');
 const path = require('path');
 const newFileCss = fs.createWriteStream(
   path.join(__dirname, 'project-dist/bundle.css')
@@ -24,12 +22,8 @@ fs.readdir(
               newFileCss.write(data.toString() + '\n');
             });
           }
-        } else {
-          console.log('он тут');
         }
       });
     }
   }
 );
-
-// console.log(path.extname('style-1.css'));
